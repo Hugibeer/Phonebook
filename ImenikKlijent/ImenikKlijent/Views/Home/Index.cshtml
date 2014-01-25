@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+@if (!User.Identity.IsAuthenticated)
+{
+    @Html.Partial("_NoLogin")
+}
+else
+{
+<h2>Imenik: @User.Identity.Name</h2>
+
+    @Html.Partial("_AddContact")
+    <button id="showHide" class="showHide">Dodaj novog kontakta</button>
+        
+    @Html.Partial("_Filteri")
+    <button id="showHideFilter" class="showHide">Filtriraj</button>
+            
+        <div id="contacts">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Ime <span class="hidden" id="imeSmjer">up</span><button id="sortIme" type="button" class="sort">&#9660;</button></th>
+                        <th>Prezime<span class="hidden" id="prezimeSmjer">up</span><button id="sortPrezime" type="button" class="sort">&#9660;</button></th>
+                        <th>Grad <span class="hidden" id="citySmjer">up</span> <button id="sortCity" type="button" class="sort">&#9660;</button></th>
+                        <th>Brojevi</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="content"></tbody>
+            </table>
+            <div class="pager">
+                <button id="prev">&larr; Prethodna</button>
+                <button id="next">Sljedeća &rarr;</button>
+            </div>
+        </div>
+
+        <section id="contactDetails" class="col-md-12">
+            <input type="hidden" value="" id="hiddenId" />
+            <div class="col-md-12">
+                <div class="col-md-8 col-sm-8">
+                    <table class="table table-bordered" id="personal"></table>
+                </div>
+                <div class="col-md-4 col-sm-4" id="image">
+
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-8">
+                <table class="table table-bordered">
+                    <tbody id="contactPhones"></tbody>
+                </table>
+            </div>
+            <div class="col-sm-12">
+                <button id="backButton">Povratak</button>
+            </div>
+        </section>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/Moje/Table.js"></script>
+        <script src="~/Scripts/Moje/Form.js"></script>
+
+}

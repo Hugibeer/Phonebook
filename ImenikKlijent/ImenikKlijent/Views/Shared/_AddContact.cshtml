@@ -1,0 +1,45 @@
+﻿<div id="postwrap" class="hidden">
+    <form name="contactForm" action="@ViewBag.BaseAddress/api/contact" method="post" enctype="multipart/form-data" class="form-horizontal" id="postContact">
+        <input type="hidden" value="@Request.Url" name="redirect" />
+        <input type="hidden" value="@User.Identity.Name" name="username" />
+        <div class="col-md-4">
+            <label for="firstName">
+                Ime
+            </label>
+            <p><input name="firstName" type="text" /></p>
+        </div>
+        <div class="col-md-4">
+            <label for="lastName">
+                Prezime
+            </label>
+            <p><input name="lastName" type="text" /></p>
+        </div>
+        <div class="col-md-4">
+            <label for="city">
+                Grad
+            </label>
+            <p><input name="city" type="text" /></p>
+        </div>
+        <div class="col-md-4">
+            <label for="description">
+                Opis
+            </label>
+            <p><input name="description" type="text" /></p>
+        </div>
+        <div class="col-md-4">
+            <label for="image">
+                Slika
+            </label>
+            <p>
+                <input name="image" type="file" accept="image/*" />
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="" width=150 height=100 id="miniImg" />
+        </div>
+        <div class="submit">
+            <input type="submit" value="Spremi" />
+        </div>
+    </form>
+</div>
+

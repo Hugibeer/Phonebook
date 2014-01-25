@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index,follow" />
+</head>
+<body>
+	<h2>Uupute za instalaciju</h2>
+	<section>
+		<h3>Postavke baze</h3>
+		<p>
+			Potrebno je otvoriti projekt Imenik i u Package Manager konzoli napisati naredbu 
+			<code>Update-Database</code>, i pritisnuti Enter, naravno :) To će stvoriti novu 
+			bazu HBServer, te u App_Data folderu pripadne <code>.mdf</code> i <code>.ldf</code>
+			datoteke. Sada pokrenite aplikaciju Imenik, otvorit će Vam se početna stranica Web API-a
+		</p>
+		<h3>Postavke klijenta</h3>
+		<p>
+			Otvorite novi Visual Studio i u njemu otvorite projekt ImenikKlijent. Kopirajte adresu 
+			poćetne stranice Web API-a koja će biti oblika <code>http://localhost:&lt;portNumber&gt;</code>
+			te ju zalijepite na 19. liniji <code>BaseController.cs</code> dokumenta umjesto defaultne vrijednosti
+			<code>http://localhost:57947</code>. Pokrenite aplikaciju ImenikKlijent, registrirajte se i 
+			spremni ste za reviziju mog uratka. Prilikom registracije stvoriti će se nova baza podataka 
+			HBKlijent, kao i pripadne <code>.mdf</code> i <code>.ldf</code> u ImenikKlijent\App_Data folderu.
+		</p>		
+	</section>
+	<section>
+		<h3>Dodatne napomene</h3>
+		<p>
+			Aplikacija je isprobana u većini desktop browsera i uspješno radi na svima, osim na Internet Exploreru 
+			i Operi 12.16. IE se buni zbog nedostatka navigacije, odnosno govori mi da je disablean back cacheing. Nisam 
+			proučio detaljno što se ovdje događa, nadam se da to neće predstavljati problem. 			
+		</p>
+	</section>
+	
+	
+</body>
+</html>
