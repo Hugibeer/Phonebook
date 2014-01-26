@@ -12,7 +12,7 @@ Client side is written using Javascript almost exclusively. This is just the fir
 use any of the gooddies that some JavaScript frameworks provide, like Backbone, Knockout or Angular. In further releases
 this can change, if it ever becomes necessary, or I just decide to showcase some of my newly obtained skills.
 
-Preffered web browsers for using the app is Opera 18, Mozilla firefox, Google Chrome and Safari, while currently it 
+Preffered web browsers for using the app are Opera 18, Mozilla firefox, Google Chrome and Safari, while currently it 
 doesn't work with Internet Explorer 11, and earlier releases of Opera. There are some issues regarding back cacheing 
 that occur because of the way the app is written currently. When I get around of learning the ways of fixing this issue, 
 the application will be updated.
